@@ -19,9 +19,9 @@ jobs:
     - name: Import firecrown
       run: |
         ulimit -c unlimited
-        python -c "import faulthandler; faulthandler.enable(); import firecrown"
-        python -c "import pyccl"
-        python -c "import sacc"
+        sudo python -c "import faulthandler; faulthandler.enable(); import camb"
+        sudo python -c "import faulthandler; faulthandler.enable(); import cosmosis"
+        sudo python -c "import faulthandler; faulthandler.enable(); import firecrown"
 
 
     - name: ls
