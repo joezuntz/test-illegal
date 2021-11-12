@@ -18,7 +18,8 @@ jobs:
 
     - name: Import firecrown
       run: |
-        python -c "import firecrown"
+        ulimit -c unlimited
+        python -c "import faulthandler; faulthandler.enable(); import firecrown"
         python -c "import pyccl"
         python -c "import sacc"
 
@@ -27,3 +28,5 @@ jobs:
       if: ${{ always() }}
       run: |
         ls -R
+        date
+        ls -ltr /cores
