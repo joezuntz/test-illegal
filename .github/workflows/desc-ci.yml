@@ -18,10 +18,7 @@ jobs:
 
     - name: Import firecrown
       run: |
-        ulimit -c unlimited
         python -c "import faulthandler; faulthandler.enable(); import camb"
-        python -c "import faulthandler; faulthandler.enable(); import cosmosis"
-        python -c "import faulthandler; faulthandler.enable(); import firecrown"
 
 
     - name: ls
@@ -29,4 +26,3 @@ jobs:
       run: |
         ls -R
         date
-        ls -ltr /cores
