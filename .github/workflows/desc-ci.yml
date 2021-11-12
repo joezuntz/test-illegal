@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: joezuntz/txpipe-auto
+      image: joezuntz/txpipe
 
     steps:
     - name: Checkout repository
