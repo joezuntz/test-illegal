@@ -1,0 +1,22 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  Test:
+
+    runs-on: ubuntu-latest
+
+    container:
+      image: joezuntz/txpipe-auto
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Import firecrown
+      run: |
+        python -c "import firecrown"
+
