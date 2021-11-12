@@ -22,3 +22,8 @@ jobs:
         python -c "import pyccl"
         python -c "import sacc"
 
+
+    - name: ls
+      if: ${{ always() }}
+      run: |
+        ls -R
